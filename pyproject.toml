@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "trail-of-echoes"
+version = "0.1.0"
+description = "Starter text-based game project"
+readme = "README.md"
+requires-python = ">=3.10"
+
+[project.scripts]
+play-game = "game.main:main"
+open-game-terminal = "game.launch_terminal:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
